@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Import Products</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <div class="container">
+        <h1>Import Products</h1>
+
+        <!-- Step 1: Choose File Section -->
+        <div class="step-container">
+            <div class="step-box" id="step1Box">
+                <h2>Step 1</h2>
+                <div class="section" id="chooseFileSection">
+                    <label for="fileInput">Choose File:</label>
+                    <input type="file" id="fileInput" name="fileInput" accept=".csv, .txt" required>
+                </div>
+                <div> Supported File Type(s): .CSV, .JSON</div>
+            </div>
+
+            <!-- Step 2: Specify Format Section -->
+            <div class="step-box" id="step2Box">
+                <h2>Step 2</h2>
+                <div class="section" id="specifyFormatSection">
+                    <label for="fileType">File Type:</label>
+                    <input type="text" id="fileType" name="fileType" required placeholder=".csv">
+
+                    <label for="encoding">Character Encoding:</label>
+                    <input type="text" id="encoding" name="encoding" required placeholder="UTF-8">
+
+                    <label for="delimiter">Delimiter:</label>
+                    <input type="text" id="delimiter" name="delimiter" required placeholder="comma">
+
+                    <div class="section" id="headerOptionsSection">
+                        <label for="header">Header Options:</label>
+                        <select id="header" name="header" required>
+                            <option value="yes">Yes</option>
+                            <option value="no">No</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Step 3: Header Options and Display Handling Section -->
+        <div class="step-box" id="step3Box">
+            <h2>Step 3: Display Handling</h2>
+            <!-- Display Handling Section -->
+            <fieldset id="displayHandlingBox">
+                <div class="columns">
+                    <div class="left-column">
+                        <label for="availableFields">Available Fields:</label>
+                        <select id="availableFields1" multiple>
+                            <option value="field1">Title</option>
+                            <option value="field2">Popularity</option>
+                            <option value="field3">Price</option>
+                            <option value="field3">Product Id</option>
+                        </select>
+                    </div>
+                    <div class="buttons">
+                        <button type="button" id="moveRight" onclick="moveSelectedFields('right')">>></button>
+                        <button type="button" id="moveLeft" onclick="moveSelectedFields('left')">&lt;&lt;</button>
+                    </div>
+                    <div class="right-column">
+                        <label for="displayedFields">Displayed Fields:</label>
+                        <select id="displayedFields1" multiple></select>
+                    </div>
+                </div>
+            </fieldset>
+        </div>
+    </div>
+
+    <!-- Buttons Section -->
+    <div class="buttons">
+        <button type="button" onclick="redirectToNextPage()">Next</button>
+        <button type="button">Cancel</button>
+    </div>
+
+    <script src="script.js"></script>
+
+    <script>
+        function redirectToNextPage() {
+            // Redirect to your desired HTML page
+            window.location.href = '../task1/index.html';
+        }
+    </script>
+</body>
+
+</html>
