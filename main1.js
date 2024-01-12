@@ -1,5 +1,3 @@
-// main.js
-
 document.addEventListener('DOMContentLoaded', function () {
     const productListElement = document.getElementById('productList');
     const loadMoreButton = document.getElementById('loadMoreButton');
@@ -34,7 +32,7 @@ document.addEventListener('DOMContentLoaded', function () {
             productId, // Include the productId in the product data
         }));
 
-        // Sort the data based on descending popularity
+        // Sorting the data based on descending popularity
         const sortedData = productsArray.sort((a, b) => b.popularity - a.popularity);
 
         // Display Sr No, Title, Price, and Popularity in separate columns
@@ -54,8 +52,7 @@ document.addEventListener('DOMContentLoaded', function () {
         loadMoreButton.style.display = end < sortedData.length ? 'block' : 'none';
     }
 
-    // URL of the JSON file
-    const jsonUrl = "https://s3.amazonaws.com/open-to-cors/assignment.json"; // Replace with the actual URL
+    const jsonUrl = "https://s3.amazonaws.com/open-to-cors/assignment.json";
 
     // Fetch JSON data
     fetchJsonData(jsonUrl)
@@ -65,7 +62,7 @@ document.addEventListener('DOMContentLoaded', function () {
                 // Display the initial 100 records
                 displayData(productsData, startIndex, startIndex + recordsPerPage);
 
-                // Add event listener for "Read More" button
+                //Event listener for "Read More" button
                 loadMoreButton.addEventListener('click', function () {
                     startIndex += recordsPerPage;
                     // Display the next 100 records
