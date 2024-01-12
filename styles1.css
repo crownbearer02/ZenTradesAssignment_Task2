@@ -1,23 +1,21 @@
-/* styles.css */
-
 body {
-    background-color: #f8f9fa; /* Light gray background */
+    background-color: #f8f9fa; 
 }
 
 .container {
     max-width: 800px;
     margin: 20px auto; /* Center the container */
     padding: 20px;
-    border: 1px solid #dee2e6; /* Border color for container */
-    border-radius: 10px; /* Rounded corners for container */
-    background-color: #ffffff; /* White background for container */
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Subtle box shadow */
+    border: 1px solid #dee2e6; 
+    border-radius: 10px; 
+    background-color: #ffffff; 
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); 
 }
 
 h1.mb-4 {
     text-align: center;
     margin-top: 20px;
-    color: #28a745; /* Blue color for heading */
+    color: #28a745; 
 }
 
 .table.table-bordered {
@@ -26,21 +24,20 @@ h1.mb-4 {
 
 /* Style table header */
 .table.table-bordered th {
-    background-color: #02cb31; /* Green background color for table header */
-    color: #ffffff; /* White color for text in table header */
+    background-color: #02cb31; 
+    color: #ffffff; 
 }
 
 /* Style table rows */
 .table.table-bordered tbody tr {
-    background-color: #ffffff; /* White background color for table rows */
+    background-color: #ffffff;
 }
 
 /* Style alternating rows for better readability */
 .table.table-bordered tbody tr:nth-child(even) {
-    background-color: #e1f9db; /* Light gray background for even rows */
+    background-color: #e1f9db; 
 }
 
-/* Style for the "Read More" button */
 #loadMoreButton {
     display: none;
     margin-top: 10px;
